@@ -1,10 +1,10 @@
-const CACHE_NAME = "workout-calculator-v2";
+const CACHE_NAME = "workout-calculator-v3";
 const APP_FILES = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./manifest.webmanifest",
+  "./styles.css?v=3",
+  "./app.js?v=3",
+  "./manifest.webmanifest?v=3",
 ];
 
 self.addEventListener("install", (event) => {
