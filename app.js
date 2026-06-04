@@ -235,7 +235,13 @@ function renderExercises() {
     const title = document.createElement("h3");
     const meta = document.createElement("p");
     title.textContent = name;
-    meta.textContent = ratio ? `${Math.round(ratio * 100)}% of ${day.anchorName} 1RM` : "Bodyweight / unweighted";
+    if (!ratio) {
+      meta.textContent = "Bodyweight / unweighted";
+    } else if (ratio === 1) {
+      meta.textContent = "Anchor";
+    } else {
+      meta.textContent = `${Math.round(ratio * 100)}% of ${day.anchorName} anchor`;
+    }
     details.append(title, meta);
 
     const weight = document.createElement("strong");
