@@ -1,0 +1,303 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f1eb;
+  color: #20242a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(135deg, rgba(42, 117, 111, 0.16), transparent 36%),
+    linear-gradient(215deg, rgba(205, 85, 52, 0.13), transparent 38%),
+    #f4f1eb;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(100%, 520px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 22px 16px 32px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.eyebrow,
+.section-label {
+  display: block;
+  margin: 0 0 5px;
+  color: #68716f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+h2 {
+  margin-top: 2px;
+  font-size: 1.25rem;
+}
+
+.week-pill,
+.sets-pill {
+  flex: 0 0 auto;
+  min-width: 92px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #1e6963;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.week-pill[data-mode="endurance"] {
+  background: #b94f32;
+}
+
+.input-panel,
+.workout-panel {
+  padding: 16px;
+  border: 1px solid rgba(32, 36, 42, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 28px rgba(55, 48, 39, 0.08);
+}
+
+.input-panel label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #c8cec9;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #20242a;
+  font-size: 1.02rem;
+}
+
+input:focus {
+  border-color: #1e6963;
+  outline: 3px solid rgba(30, 105, 99, 0.18);
+}
+
+#saveButton,
+#todayButton {
+  min-height: 48px;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: #20242a;
+  color: #fff;
+  font-weight: 800;
+}
+
+.helper-text {
+  margin-top: 10px;
+  color: #59615f;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.summary-grid div {
+  min-height: 76px;
+  padding: 12px 10px;
+  border-radius: 8px;
+  background: #28353b;
+  color: #fff;
+}
+
+.summary-grid span {
+  display: block;
+  min-height: 30px;
+  color: #c9d0cc;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.summary-grid strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.calendar-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 13px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgba(32, 36, 42, 0.09);
+}
+
+.calendar-panel p {
+  color: #333b3d;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.tabs,
+.mode-toggle {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tabs {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mode-toggle {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tab,
+.mode {
+  min-height: 44px;
+  border: 1px solid rgba(32, 36, 42, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.74);
+  color: #30383a;
+  font-weight: 800;
+}
+
+.tab.active,
+.mode.active {
+  background: #1e6963;
+  border-color: #1e6963;
+  color: #fff;
+}
+
+.mode[data-mode="endurance"].active {
+  background: #b94f32;
+  border-color: #b94f32;
+}
+
+.workout-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.sets-pill {
+  min-width: 72px;
+  background: #dfb652;
+  color: #20242a;
+}
+
+.exercise-list {
+  display: grid;
+  gap: 8px;
+}
+
+.exercise-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid rgba(32, 36, 42, 0.08);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.exercise-row h3 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.exercise-row p {
+  color: #68716f;
+  font-size: 0.83rem;
+  line-height: 1.3;
+}
+
+.exercise-row strong {
+  flex: 0 0 auto;
+  color: #1e6963;
+  font-size: 1.08rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 380px) {
+  .app-shell {
+    padding-inline: 12px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid div {
+    min-height: 64px;
+  }
+
+  .summary-grid span {
+    min-height: 0;
+  }
+}

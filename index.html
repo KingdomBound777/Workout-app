@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e6963" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Workout Calc" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Workout Calculator</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow">Workout Calculator</p>
+          <h1>Plan Builder</h1>
+        </div>
+        <div class="week-pill" id="weekTypeBadge">Strength</div>
+      </header>
+
+      <section class="input-panel">
+        <label for="legStrengthInput">Leg press strength day weight</label>
+        <div class="input-row">
+          <input id="legStrengthInput" type="number" min="0" step="2.5" inputmode="decimal" placeholder="Enter lbs" />
+          <button id="saveButton" type="button">Update Plan</button>
+        </div>
+        <p class="helper-text">
+          This number is treated as 80% of your leg press 1RM. All anchors and exercise targets update from that prime anchor.
+        </p>
+      </section>
+
+      <section class="summary-grid" aria-live="polite">
+        <div>
+          <span>Prime Anchor</span>
+          <strong id="primeAnchorValue">--</strong>
+        </div>
+        <div>
+          <span>Chest Anchor</span>
+          <strong id="chestAnchorValue">--</strong>
+        </div>
+        <div>
+          <span>Pull Anchor</span>
+          <strong id="pullAnchorValue">--</strong>
+        </div>
+      </section>
+
+      <section class="calendar-panel">
+        <div>
+          <span class="section-label">Current Week</span>
+          <p id="weekDescription">Enter your leg press strength number to build the plan.</p>
+        </div>
+        <button id="todayButton" type="button" aria-label="Refresh current week">Today</button>
+      </section>
+
+      <nav class="tabs" aria-label="Training days">
+        <button class="tab active" data-day="push" type="button">Push</button>
+        <button class="tab" data-day="pull" type="button">Pull</button>
+        <button class="tab" data-day="legs" type="button">Legs</button>
+      </nav>
+
+      <section class="mode-toggle" aria-label="Week type">
+        <button class="mode active" data-mode="strength" type="button">Strength</button>
+        <button class="mode" data-mode="endurance" type="button">Endurance</button>
+      </section>
+
+      <section class="workout-panel">
+        <div class="workout-heading">
+          <div>
+            <span class="section-label" id="dayLabel">Push Day</span>
+            <h2 id="modeTitle">Strength Week</h2>
+          </div>
+          <div class="sets-pill" id="setsLabel">5 x 5</div>
+        </div>
+        <div class="exercise-list" id="exerciseList"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "Workout Calculator",
+  "short_name": "Workout Calc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f1eb",
+  "theme_color": "#1e6963"
+}
